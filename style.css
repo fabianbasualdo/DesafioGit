@@ -25,7 +25,66 @@ html{
     padding:0;
 }
 
-/****************************creo el grid para celular***************************/
+
+
+
+
+
+
+
+
+/***************************ANIMACION en la rama llamada animaciones****************************/
+.slider{
+    animation-name:animacion; /* es el nombre que le coloque al keyframes*/
+    animation-duration: 4s; /*la animacion tiene una duracion de 4seg*/
+    animation-iteration-count:infinite;/*repite la animacion infinitamente*/
+    animation-timing-function: ease-in;/*Disminuye la velocidad de la animación al comenzar y va aumentando la aceleración sobre el final.*/
+    animation-direction: reverse; /*en lugar de empezar del 0%, empezara en el 100%*/
+}
+
+@keyframes animacion{
+0%{
+
+    background-color: blue; /*hacia el 0% el elemento sera azul*/
+}
+
+100%{
+ background-color: burlywood; /*hacia el 100% el elemento sera beige*/
+  
+}
+
+}
+.slider:hover{
+    animation-play-state: paused; /*al posar el mouse se detiene la animacion hasta que quite el mouse*/
+}
+
+
+/******************fin animacion con animation en la rama animacion**************************/
+
+/***********************animacion con Transition en la rama animacion************************/
+
+article p a img{
+    Transition: width 4s, border-radius 1s; /*especifico a que propiedades le aplico el transition*/
+}
+article p a img:hover{
+    Border-radius:50%; /*al pasar el mouse redondeo sus bordes a un 50%*/
+    Width:500px; /*al pasar el mouse le cambio su tamaño a 500px*/
+}    
+
+/***********************fin de animacion con Transition en la rama animacion*****************/
+
+/**********************aplicando transform a las palabras del footer***********************/
+
+.menufooterhijo ul li:hover{
+    Transform: scale(2,3); /*quiero que aumento dos veces de su tamaño en el eje x, tambien que aumente 3 veces su tamaño en el eje y. al pasar el mouse*/
+}
+
+/**********************fin de transform**************************************************/
+
+
+
+
+/****************************creo el grid para celular**********************************/
 .formindex{
     margin:0;
     padding:0;
